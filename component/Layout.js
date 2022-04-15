@@ -1,7 +1,8 @@
 import React from "react";
+import classes from "./UserCard.module.css";
 
-function Layout() {
-  return <div>Layout</div>;
+function Layout(props) {
+  return <div className={classes.Layout}>{props.children}</div>;
 }
 
 export default Layout;

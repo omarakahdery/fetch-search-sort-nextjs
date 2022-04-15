@@ -1,18 +1,30 @@
 import React from "react";
 import Image from "next/image";
-function UserCard() {
+import { useState, useEffect } from "react";
+
+import classes from "./UserCard.module.css";
+function UserCard({ data }) {
   return (
-    <div>
-      <h3>Omar Alkahder</h3>
-      <p>28 years old</p>
-      <p>Email</p>
-      <Image
-        src="https://avatars.githubusercontent.com/u/85066587?v=4"
-        height={200}
-        width={300}
-      />
-    </div>
+    <>
+      {data.map((d) => (
+        <div className={classes.card}>
+          <h3>{d.name.first}</h3>
+          <p>{d.dob.age} years old</p>
+          <p>{d.email}</p>
+          <p>{d.location.city}</p>
+          <div className={classes.img}>
+            <Image src={d.picture.medium} height={200} width={200} />
+          </div>
+        </div>
+      ))}
+    </>
   );
 }
 
 export default UserCard;
+
+// const CardDes = ({ d }) => {
+//   return (
+
+//   );
+// };
