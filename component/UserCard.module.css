@@ -1,11 +1,11 @@
 .Layout {
   background-color: rgb(243, 222, 222);
   width: 100%;
+  background-color: rgb(233, 73, 73);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 10px;
 }
 
 .card {
@@ -18,11 +18,14 @@
   justify-content: space-between;
   flex-direction: column;
   border-radius: 15px;
+  margin: 10px;
 }
+
 .img {
   border-radius: 15px;
   overflow: hidden;
 }
+
 .btnCo {
   padding: 6px 12px;
   margin-left: -1px;

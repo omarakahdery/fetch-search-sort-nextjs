@@ -1,8 +1,8 @@
-import React from "react";
 import classes from "./UserCard.module.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import UserCard from "./UserCard";
 
-const PageBtn = ({ data, sliceData }) => {
+const PageBtn = ({ data }) => {
   const [ten, setTen] = useState({ first: 0, sec: 10 });
   function getBtnNo(l) {
     let z = 1;
@@ -10,14 +10,14 @@ const PageBtn = ({ data, sliceData }) => {
     if ((l / 10) % 1 === 0) return (z = l / 10);
     if ((l / 10) % 1 !== 0) return (z = Math.ceil(l / 10));
   }
-  console.log(ten);
-  sliceData(data.slice(ten.first, ten.sec));
   const lengthOfArr = getBtnNo(data.length);
 
   var arrLength = Array.from({ length: lengthOfArr }, () =>
     Math.floor(Math.random() * lengthOfArr)
   );
-  //   arrLength.length = lengthOfArr;
+
+  const sliceData = data.slice(ten.first, ten.sec);
+  const [style, setStyle] = useState({});
   return (
     <>
       {arrLength.map((btn, index) => (
@@ -26,13 +26,18 @@ const PageBtn = ({ data, sliceData }) => {
           onClick={() => {
             let xx = (index + 1) * 10;
             let zz = (index + 1) * 10 - 10;
-            // const { first, sec } = ten;
+
             setTen({ first: zz, sec: xx });
           }}
           className={classes.btnCo}
+          style={style}
         >
           {index + 1}
         </button>
+      ))}
+
+      {sliceData.map((d) => (
+        <UserCard d={d} />
       ))}
     </>
   );
