@@ -1,9 +1,9 @@
-# have a look on => https://fetch-search-sort.vercel.app/
+## take a look at the project => https://fetch-search-sort.vercel.app/
 
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+### Getting Started
 
 First, run the development server:
 
