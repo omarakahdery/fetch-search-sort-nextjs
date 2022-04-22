@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import { useState, useEffect } from "react";
 
 import classes from "./UserCard.module.css";
 function UserCard({ d }) {

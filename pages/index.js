@@ -19,6 +19,6 @@ export async function getServerSideProps() {
   const data = await fetch("https://randomuser.me/api/?results=44");
   const results = data.json();
   return {
-    props: results, // will be passed to the page component as props
+    props: results,
   };
 }
