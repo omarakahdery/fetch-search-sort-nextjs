@@ -16,7 +16,7 @@ export default function Home({ results }) {
 }
 
 export async function getServerSideProps() {
-  const data = await fetch("https://randomuser.me/api/?results=44");
+  const data = await fetch("https://randomuser.me/api/?results=50");
   const results = data.json();
   return {
     props: results,
