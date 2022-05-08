@@ -1,7 +1,13 @@
-## App Link => https://fetch-search-sort.vercel.app/
+I Built this with [Next.js](https://nextjs.org) and deployed it in to [vercel](https://vercel.com)
 
+### fetch, search and sort data
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+###### Nested Responsive Navbar
+
+App Link => https://fetch-search-sort.vercel.app/
+<br/>
+<br/>
+<br/>
 
 ### Getting Started
 
